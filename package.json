@@ -1,0 +1,43 @@
+{
+  "name": "@urbanbigdatacentre/data-blocks",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/urbanbigdatacentre/data-blocks.git"
+  },
+  "version": "0.0.1",
+  "description": "React based UI Component Library for big data handling, interactions, presentation and visualisation.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rollup": "rollup -c"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "d3",
+    "mui",
+    "data-viz",
+    "components"
+  ],
+  "author": "Andy Clarke",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@types/react": "^18.0.15",
+    "react": "^18.2.0",
+    "rollup": "^2.77.1",
+    "rollup-plugin-dts": "^4.2.2",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}

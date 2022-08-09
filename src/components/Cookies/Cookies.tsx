@@ -10,7 +10,7 @@ export interface CookiesProps {
 
 const CookiesBanner = (props: CookiesProps) => {
 
-    const [cookieConsent, setCookieConsent] = useState(false);
+    const [cookieConsent, setCookieConsent] = useState<boolean>(false);
 
     const getCookieValue = (name: string) => (
         document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''
@@ -27,8 +27,6 @@ const CookiesBanner = (props: CookiesProps) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 
         const target = event.target as HTMLButtonElement;
-
-        event.preventDefault();
 
         let expires = "expires=" + new Date(new Date().setDate(new Date().getDate() + 365)).toUTCString();
 
@@ -127,5 +125,7 @@ const CookiesBanner = (props: CookiesProps) => {
         return <></>
     }
 }
+
+
 
 export default CookiesBanner;

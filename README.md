@@ -55,6 +55,12 @@ Update the version inside `package.json`
   }
 ```
 
+Run rollup locally
+
+```bash
+  npm run rollup
+```
+
 Add all changes to Github repo
 
 ```bash

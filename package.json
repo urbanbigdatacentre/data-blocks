@@ -8,7 +8,7 @@
     "type": "git",
     "url": "https://github.com/urbanbigdatacentre/data-blocks.git"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React based UI Component Library for big data handling, interactions, presentation and visualisation.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -46,8 +46,8 @@
     "@storybook/testing-library": "^0.0.13",
     "@types/react": "^18.0.15",
     "babel-loader": "^8.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "rollup": "^2.77.1",
     "rollup-plugin-dts": "^4.2.2",
     "tslib": "^2.4.0",

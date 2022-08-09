@@ -10,7 +10,7 @@ export interface CookiesProps {
 
 const CookiesBanner = (props: CookiesProps) => {
 
-    const [cookieConsent, setCookieConsent] = useState<boolean>(false);
+    const [cookieConsent, setCookieConsent] = useState(false);
 
     const getCookieValue = (name: string) => (
         document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)')?.pop() || ''

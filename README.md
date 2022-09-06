@@ -3,8 +3,9 @@
 
 React based UI Component Library for big data handling, interactions, presentation and visualisation.
 
+[Link to Package Docs](https://chill-mulberry-038.notion.site/data-blocks-c331a8b9d9a043739b829393be1e5e16)
 
-_Currently a work in progress - Aug, 2022_
+_Currently a work in progress - Sept, 2022_
 
 
 ## Authors
@@ -37,9 +38,43 @@ _Import the component_
 ```js
 import {CookiesBanner} from '@urbanbigdatacentre/data-blocks'
 ```
-_Use the component with a `color` prop: string._
+- Required `color` prop: `<string>`
+- Optional `theme` prop : Mui Design Theme `<any>`
 ```jsx
 <CookiesBanner color={"#219FF3"}/>
+```
+
+### Date Range Picker
+Two date pickers combined to provide a start date and end date picker. Allows for external state mgmt and dispatch actions.
+
+__Usage__
+
+_Import the component_
+```js
+import {DateRangePicker} from '@urbanbigdatacentre/data-blocks'
+```
+_All the following props are optional_
+
+- `theme`: Mui Design Theme `<any>`
+- `startLabelText`: Label to go above start date text field `<string>`
+- `endLabelText`: Label to go above end date text field `<string>`
+- `externalStateStartDate` : External start date obj. Designed for Redux state mgmt `<Dayjs | Date>`
+- `externalStateStartDate` : External end date obj. Designed for Redux state mgmt `<Dayjs | Date>`
+- `externalStateSetStartDateDispatch`: Dispatch function to handle external start date state change. Designed for Redux state mgmt. `<any>`
+- `externalStateSetEndDateDispatch`: Dispatch function to handle external end date state change. Designed for Redux state mgmt. `<any>`
+
+```jsx
+// Example Usage
+
+<DateRangePicker
+    theme={myMuiDesignTheme}
+    startLabelText={"Check In"}
+    endLabelText={"Check Out"}
+    externalStateStartDate={myReduxStore.startDate}
+    externalStateEndDate={myReduxStore.endDate}
+    externalStateSetStartDateDispatch={dispatchEvent}
+    externalStateSetEndDateDispatch={dispatchEvent}
+/>
 ```
 
 ## New Package Releases

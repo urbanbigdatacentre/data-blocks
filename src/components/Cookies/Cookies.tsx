@@ -3,9 +3,10 @@ import * as React from 'react';
 import {useState, useEffect} from "react";
 import {Box, Container, styled, Typography, Button, createTheme, ThemeProvider} from "@mui/material";
 
-// Declare Types
+// Declare Props & Types
 export interface CookiesProps {
     color: string;
+    theme?: any;
 }
 
 const CookiesBanner = (props: CookiesProps) => {
@@ -41,12 +42,13 @@ const CookiesBanner = (props: CookiesProps) => {
         }
     }
 
-    const myTheme = createTheme({
+    // Design System Theme
+    const theme = props.theme ? props.theme : createTheme({
         palette: {
             primary: {
                 main: props.color,
             }
-    }})
+        }})
 
     const CookiesContainer = styled(Container)(({theme}) => ({
         maxWidth: `90%`,
@@ -108,7 +110,7 @@ const CookiesBanner = (props: CookiesProps) => {
     }))
     if (!cookieConsent) {
         return (
-            <ThemeProvider theme={myTheme}>
+            <ThemeProvider theme={theme}>
             <CookiesContainer id={"cookies-container"}>
                 <CookiesTextBox>
                     <CookiesText>This site uses cookies.</CookiesText>

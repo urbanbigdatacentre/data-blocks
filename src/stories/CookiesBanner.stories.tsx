@@ -1,9 +1,7 @@
 // CookiesBanner.stories.ts|tsx
 
 import React from 'react';
-
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import {CookiesBanner} from "../components";
 
 export default {

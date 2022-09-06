@@ -35,7 +35,10 @@ const CookiesBanner = (props: CookiesProps) => {
         if (target.id === "reject-button") {
             document.cookie = `CookieConsent=false;${expires}`
             setCookieConsent(false)
-            document.getElementById('#cookies-container')!.style.display = 'none';
+            const cookiesContainer = document.getElementById('cookies-container')
+            if (cookiesContainer !== null) {
+                cookiesContainer.style.display = 'none';
+            }
         } else if (target.id === "accept-button") {
             document.cookie = `CookieConsent=true;${expires}`
             setCookieConsent(true)

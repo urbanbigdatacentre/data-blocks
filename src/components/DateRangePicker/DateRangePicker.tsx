@@ -26,7 +26,7 @@ const DateRangePicker = (props: DateRangePickerProps) => {
 
     // Declare Component States
     const dayjs = require('dayjs')
-    dayjs().format()
+
     const [startDate, setStartDate] = React.useState<any | null >(dayjs(JSON.stringify(dayjs().year()) + "-01-01"))
     const [endDate, setEndDate] = React.useState<any | null >(dayjs())
 

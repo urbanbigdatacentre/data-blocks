@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {TextField, Box, styled, Typography, createTheme, ThemeProvider, Stack} from "@mui/material";
 import {DatePicker, LocalizationProvider} from "@mui/x-date-pickers";
+import dayjs from 'dayjs'
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 import {useEffect} from "react";
 
@@ -24,7 +25,6 @@ export interface DateRangePickerProps {
 const DateRangePicker = (props: DateRangePickerProps) => {
 
     // Declare Component States
-    const dayjs = require('dayjs')
 
     const [startDate, setStartDate] = React.useState<any | null >(dayjs(JSON.stringify(dayjs().year()) + "-01-01"))
     const [endDate, setEndDate] = React.useState<any | null >(dayjs())

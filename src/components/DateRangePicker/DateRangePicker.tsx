@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {TextField, Box, styled, Typography, createTheme, ThemeProvider, Stack} from "@mui/material";
 import {DatePicker, LocalizationProvider} from "@mui/x-date-pickers";
-import * as dayjs from 'dayjs'
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 import {useEffect} from "react";
 

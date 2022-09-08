@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {TextField, Box, styled, Typography, createTheme, ThemeProvider, Stack} from "@mui/material";
 import {DatePicker, LocalizationProvider} from "@mui/x-date-pickers";
-import dayjs, {Dayjs} from "dayjs";
+import dayjs from "dayjs";
+import * as customParseFormat from 'dayjs/esm/plugin/customParseFormat';
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 import {useEffect} from "react";
 
@@ -14,8 +15,8 @@ export interface DateRangePickerProps {
     startLabelText?: string;
     endLabelText?: string;
     // External State MGMT 👇
-    externalStateStartDate?: Dayjs | Date;
-    externalStateEndDate?: Dayjs | Date;
+    externalStateStartDate?: any | Date;
+    externalStateEndDate?: any | Date;
     // Seek to improve these types in next iteration
     // To be used primarily as redux actions dispatching new start and end date states
     externalStateSetStartDateDispatch?: any;
@@ -25,8 +26,8 @@ export interface DateRangePickerProps {
 const DateRangePicker = (props: DateRangePickerProps) => {
 
     // Declare Component States
-    const [startDate, setStartDate] = React.useState<Dayjs | null >(dayjs(JSON.stringify(dayjs().year()) + "-01-01"))
-    const [endDate, setEndDate] = React.useState<Dayjs | null >(dayjs())
+    const [startDate, setStartDate] = React.useState<any | null >(dayjs(JSON.stringify(dayjs().year()) + "-01-01"))
+    const [endDate, setEndDate] = React.useState<any | null >(dayjs())
 
     const [openStart, setOpenStart] = React.useState<boolean>(false)
     const [openEnd, setOpenEnd] = React.useState<boolean>(false)
